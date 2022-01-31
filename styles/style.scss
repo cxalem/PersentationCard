@@ -1,0 +1,24 @@
+$background-color: #102929;
+$font-color: #EDF8F8;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: $background-color url(/public/img/background.png) no-repeat fixed center;
+}
+
+div#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
