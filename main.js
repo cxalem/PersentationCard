@@ -2,24 +2,46 @@ import "./components/PresentationCard";
 import "./components/StackCard";
 import "./components/CustomButton";
 import "./components/AboutMeButton";
+import "./components/CustomCard";
+import "./components/CustomSpan";
 
 const myStack = document.getElementById('my-stack');
-const stackList = document.getElementById('stack-list');
+const stackListSection = document.getElementById('stack-list');
 const presentationCard = document.getElementById('presentation-card');
 const logo = document.getElementById('logo');
+const stackContainer = document.querySelector('.stack-container');
+const aboutMeBtn = document.getElementById('about-me');
+const aboutMeSection = document.getElementById('about-me-section');
 
 const showStackList = () => {
-    if (stackList.style.display = 'none') {
+    if (stackListSection.style.display = 'none') {
         presentationCard.style.display = 'none';
-        stackList.style.display = 'grid';
+        stackListSection.style.display = 'block';
+        setTimeout(() => {
+            stackContainer.classList.add('show-list');
+            stackContainer.style.margin = '0';
+        }, 5);
+    }
+}
+
+const showAboutMe = () => {
+    if (aboutMeSection.style.display = 'none') {
+        presentationCard.style.display = 'none';
+        aboutMeSection.style.display = 'block';
+        setTimeout(() => {
+            aboutMeSection.classList.add('show-list');
+            aboutMeSection.style.margin = '0';
+        }, 5);
     }
 }
 
 logo.addEventListener('click', () =>{
-    if (stackList.style.display = 'grid') {
+    if (stackListSection.style.display = 'block') {
         presentationCard.style.display = 'block';
-        stackList.style.display = 'none';
+        stackListSection.style.display = 'none';
+        aboutMeSection.style.display = 'none';
     }
 })
 
+aboutMeBtn.addEventListener('click', showAboutMe);
 myStack.addEventListener('click', showStackList);

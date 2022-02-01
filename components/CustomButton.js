@@ -23,7 +23,7 @@ class CustomButton extends HTMLElement {
     button {
         font-size: 1.5rem;
         border-width: 0px;
-        max-width: 219px;
+        width: 100%;
         padding: 13px 55px;
         border-radius: 100px;
         color: var(--font-color);

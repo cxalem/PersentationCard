@@ -28,7 +28,6 @@ class PresentationCard extends HTMLElement {
 
     div.card-container {
         display: grid;
-        grid-template-columns: 1fr .5fr;
         max-width: 901px;
         padding: 42px 45px;
         background: #5b189e10;
@@ -94,6 +93,35 @@ class PresentationCard extends HTMLElement {
         max-height: 319px;
     }
 
+    @media screen and (min-width: 340px){
+      div.card-container {
+        grid-template-columns: 1fr;
+      }
+      img.profile-img {
+        display: none;
+      }
+      div.button-container {
+        display: grid;
+        row-gap: 15px;
+    }
+  }
+
+    @media screen and (min-width: 640px){
+      div.card-container {
+        grid-template-columns: 1fr .5fr;
+        justify-items: flex-end;
+      }
+      img.profile-img {
+        display: block;
+      }
+      div.button-container {
+        display: flex;
+        flex-direction: initial;
+    }
+      div.button {
+        margin-right: 15px;
+    }
+  }
   `;
   }
 
@@ -113,9 +141,11 @@ class PresentationCard extends HTMLElement {
                 <img src="${this.srcimgs}">
                 <img src="${this.srcimgt}">
             </div>
-            <p class="short-description">Frontend dev on the making. Tech lover. I’m passionate about art and personal growth. <mark>Do you want to create to improve LatAm?</mark> Get in touch with me!</p>
+            <p class="short-description">Frontend dev on the making. Tech lover. I’m passionate about art and personal growth. <mark>Do you want to create to improve Latin America?</mark> Get in touch with me!</p>
             <div class="button-container">
+              <div class="button">
                 <slot name="mystack"></slot>
+              </div>
                 <slot name="aboutme"></slot>
             </div>
         </div>

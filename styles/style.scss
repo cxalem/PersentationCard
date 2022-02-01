@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: $background-color url(/public/img/background.png) no-repeat fixed center;
+  background: $background-color url(/img/background.png) no-repeat fixed center;
   header.header {
     display: flex;
     align-items: center;
@@ -22,6 +22,10 @@ body {
     img {
       height: 50px;
       cursor: pointer;
+      &:hover {
+        filter: invert(30%) sepia(50%) saturate(150%) hue-rotate(49deg) brightness(10%) contrast(85%);
+        transition: 0.1s ease-in-out;
+      }
     }
   }
 }
@@ -29,14 +33,76 @@ body {
 div#app {
   display: flex;
   justify-content: center;
-  margin: 80px 0 80px 0;
-  presentation-card > custom-button {
-    margin-right: 25px;
-  }
-  div.stack-container {
-    grid-template-columns: 1fr;
-    row-gap: 30px;
+  margin: 70px 0 80px 0;
+
+  section.stack-list-section {
     display: none;
   }
 
+ 
+
+  div.show-list, section.show-list {
+    transition: ease-in-out .8s;
+  }
+
+  div.stack-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    margin-top: 320px;
+  }
+
+  section.aboutme-section {
+    margin-top: 320px;
+    display: none;
+    flex-direction: column;
+    div.goals-container {
+      display: grid;
+      row-gap: 30px;
+    }
+
+    h3 {
+      color: $font-color;
+      font-size: 3.5rem;
+      margin: 55px 0;
+    }
+    
+    div.cards-container {
+      display: flex;
+    }
+  }
 }
+
+@media screen and (min-width: 340px) {
+  body header.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+  div.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    custom-card {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 786px){
+  body header.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+  }
+  div.cards-container {
+    display: flex;
+    flex-direction: initial;
+    justify-content: flex-start;
+    custom-card {
+      margin-right: 94px;
+    }
+  }
+}
+

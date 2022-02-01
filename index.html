@@ -2,31 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/svg+xml" href="img/devam-isotipo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Vite App</title>
+    <title>Devam - Alejandro Mena</title>
   </head>
   <body>
     <header class="header">
-      <img id="logo" src="/public/img/devam-isotipo.svg" alt="Devam" class="logo">
+      <img id="logo" src="img/devam-isotipo.svg" alt="Devam" class="logo">
       <custom-button buttoncontent="Contact me!"></custom-button>
     </header>
+
     <div id="app">
 
-      <presentation-card id="presentation-card" names="Alejandro José" lastnames="Mena González" srcimgf="./public/img/github.svg" srcimgs="./public/img/linkedin.svg" srcimgt="./public/img/Twitter.svg" stack="My Stack" aboutme="About me" profileimg="/public/img/profile.png">
-        <custom-button id="my-stack" buttoncontent="My Stack" slot="mystack"></custom-button>
-        <aboutme-button id="about-me" aboutme="About me" slot="aboutme"></aboutme-button>
-      </presentation-card>
+      <section id="presentation-card" class="profile-section">
+        <presentation-card names="Alejandro José" lastnames="Mena González" srcimgf="img/github.svg" srcimgs="img/linkedin.svg" srcimgt="img/Twitter.svg" stack="My Stack" aboutme="About me" profileimg="img/profile.png">
+          <custom-button id="my-stack" buttoncontent="My Stack" slot="mystack"></custom-button>
+          <aboutme-button id="about-me" aboutme="About me" slot="aboutme"></aboutme-button>
+        </presentation-card>
+      </section>
 
-      <div id="stack-list" class="stack-container">
-        <stack-card stacktitle="Figma" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/figma.svg"></stack-card>
-        <stack-card stacktitle="HTML5" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/html.svg"></stack-card>
-        <stack-card stacktitle="Sass" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/sass.svg"></stack-card>
-        <stack-card stacktitle="JavaScript" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/javascript.svg"></stack-card>
-      </div>
+      <section id="stack-list" class="stack-list-section">
+        <div class="stack-container">
+          <stack-card stacktitle="Figma" stackdescription="I can design and prototype mobile apps and websites using components and best practices in Figma." stackimg="/img/figma.svg"></stack-card>
+          <!-- =================================================================================================== -->
+          <stack-card stacktitle="HTML5" stackdescription="I can layout a website or a web app using HTML5 best practices. And I'm sorry to say, but HTML is a language 🙄" stackimg="/img/html.svg"></stack-card>
+          <!-- =================================================================================================== -->
+          <stack-card stacktitle="Sass" stackdescription="Since I discovered SASS I haven't stopped using nesting and its simple way of declaring variables and implementing CSS functions in my projects." stackimg="/img/sass.svg"></stack-card>
+          <!-- =================================================================================================== -->
+          <stack-card stacktitle="JavaScript" stackdescription="I am still learning JavaScript. I currently understand how it works and apply logic to develop certain functions, but I need experience to solve complex problems." stackimg="/img/javascript.svg"></stack-card>
+        </div>
+      </section>
+
+      <section id="about-me-section" class="aboutme-section">
+        <custom-span spancontent="I believe in communication as an amplifier of knowledge. I am passionate about technology and personal growth. I always go beyond, I believe little in the impossible and I am not afraid to work to make the world a better place."></custom-span>
+        <h3 class="learning h3title">Currently learning...</h3>
+        <div class="cards-container">
+          <custom-card cardimg="/img/react.svg" cardtitle="ReactJS" cardcontent="I’m in the very beginnin, I’ll keep you guys updated."></custom-card>
+          <custom-card cardimg="/img/usa.svg" cardtitle="English" cardcontent="I speak conversational English, but I still have a lot to learn."></custom-card>
+        </div>
+        <h3 class="goals-title h3title">My goals as a professional...</h3>
+        <div class="goals-container">
+          <custom-span spancontent="My goal as a professional goes beyond being a successful programmer, I want to lead teams that, through some product, manage to positively impact Latin America and the world."></custom-span>
+          <custom-span spancontent="In the shorter term, my goal is to work for a project that I believe in and connect with its mission. I am interested in crypto and high social impact software."></custom-span>
+          <custom-span spancontent="Learning NodeJS. With the idea of becoming a full stack developer, I am interested in understanding how databases work and how I can tie this into my interfaces."></custom-span>
+        </div>
+      </section>
 
     </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

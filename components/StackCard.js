@@ -40,7 +40,7 @@ class StackCard extends HTMLElement {
 
     div.info-container p {
         color: #edf8f8c8;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         margin: 5px 0 0 0;
     }
 
