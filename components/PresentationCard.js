@@ -12,8 +12,6 @@ class PresentationCard extends HTMLElement {
       "srcimgs",
       "srcimgt",
       "shortdescription",
-      "stack",
-      "aboutme",
       "profileimg"
     ];
   }
@@ -92,37 +90,6 @@ class PresentationCard extends HTMLElement {
         display: flex;
     }
 
-    div.button-container > button {
-        font-size: 1.5rem;
-        width: 40%;
-        padding: 13px 55px;
-        border-radius: 100px;
-        color: var(--font-color);
-    }
-
-    button.stack {
-        background: #5B189E;
-        margin-right: 20px;
-        cursor: pointer;
-        border-width: 1.5px;
-        border-color: #edf8f800;
-    }
-
-    button.about-me {
-        background: none;
-        border-style: solid;
-        border-width: 1.5px;
-        border-color: var(--font-color);
-        cursor: pointer;
-    }
-    
-    button.stack:hover, button.about-me:hover {
-        border-color: #edf8f800;
-        background: #9e188f;
-        box-shadow: 0 0 15px #9e188f;
-        transition: 0.1s ease-in-out;
-    }
-
     img.profile-img {
         max-height: 319px;
     }
@@ -148,8 +115,8 @@ class PresentationCard extends HTMLElement {
             </div>
             <p class="short-description">Frontend dev on the making. Tech lover. I’m passionate about art and personal growth. <mark>Do you want to create to improve LatAm?</mark> Get in touch with me!</p>
             <div class="button-container">
-                <button class="stack" type="button">${this.stack}</button>
-                <button class="about-me" type="button">${this.aboutme}</button>
+                <slot name="mystack"></slot>
+                <slot name="aboutme"></slot>
             </div>
         </div>
         <img class="profile-img" src="${this.profileimg}">

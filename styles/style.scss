@@ -14,11 +14,29 @@ html {
 
 body {
   background: $background-color url(/public/img/background.png) no-repeat fixed center;
+  header.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 80px;
+    justify-content: space-between;
+    img {
+      height: 50px;
+      cursor: pointer;
+    }
+  }
 }
 
 div#app {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 80px 0 80px 0;
+  presentation-card > custom-button {
+    margin-right: 25px;
+  }
+  div.stack-container {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    display: none;
+  }
+
 }

@@ -8,8 +8,24 @@
     <title>Vite App</title>
   </head>
   <body>
+    <header class="header">
+      <img id="logo" src="/public/img/devam-isotipo.svg" alt="Devam" class="logo">
+      <custom-button buttoncontent="Contact me!"></custom-button>
+    </header>
     <div id="app">
-      <presentation-card names="Alejandro José" lastnames="Mena González" srcimgf="./public/img/github.svg" srcimgs="./public/img/linkedin.svg" srcimgt="./public/img/Twitter.svg" stack="My Stack" aboutme="About me" profileimg="/public/img/profile.png"></presentation-card>
+
+      <presentation-card id="presentation-card" names="Alejandro José" lastnames="Mena González" srcimgf="./public/img/github.svg" srcimgs="./public/img/linkedin.svg" srcimgt="./public/img/Twitter.svg" stack="My Stack" aboutme="About me" profileimg="/public/img/profile.png">
+        <custom-button id="my-stack" buttoncontent="My Stack" slot="mystack"></custom-button>
+        <aboutme-button id="about-me" aboutme="About me" slot="aboutme"></aboutme-button>
+      </presentation-card>
+
+      <div id="stack-list" class="stack-container">
+        <stack-card stacktitle="Figma" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/figma.svg"></stack-card>
+        <stack-card stacktitle="HTML5" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/html.svg"></stack-card>
+        <stack-card stacktitle="Sass" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/sass.svg"></stack-card>
+        <stack-card stacktitle="JavaScript" stackdescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ac nibh orci vel nisi et ultrices. Enim fringilla aliquet rutrum quis volutpat diam eget." stackimg="/public/img/javascript.svg"></stack-card>
+      </div>
+
     </div>
     <script type="module" src="/main.js"></script>
   </body>
