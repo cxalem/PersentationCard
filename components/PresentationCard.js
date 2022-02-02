@@ -158,7 +158,7 @@ class PresentationCard extends HTMLElement {
                 <a href="${this.twitterlink}"><img src="${this.srcimgt}"></a>
                 <a href="${this.linkedinlink}"><img src="${this.srcimgs}"></a>
             </div>
-            <p class="short-description">Frontend dev on the making. Tech lover. I’m passionate about art and personal growth. <mark>Do you want to create to improve Latin America?</mark> Get in touch with me!</p>
+            <p class="short-description">Frontend dev on the making. Tech lover. I’m passionate about art and personal growth. <mark>Do you want to create to improve Latin America?</mark> Let's do it together!</p>
             <div class="button-container">
               <div class="button">
                 <slot name="mystack"></slot>
