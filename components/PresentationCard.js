@@ -12,7 +12,10 @@ class PresentationCard extends HTMLElement {
       "srcimgs",
       "srcimgt",
       "shortdescription",
-      "profileimg"
+      "profileimg",
+      "githublink",
+      "linkedinlink",
+      "twitterlink"
     ];
   }
 
@@ -66,7 +69,7 @@ class PresentationCard extends HTMLElement {
     div.socialmedia-container > img {
         cursor: pointer;
     }
-    div.socialmedia-container > img:hover {
+    a > img:hover {
         filter: invert(30%) sepia(50%) saturate(150%) hue-rotate(49deg) brightness(10%) contrast(85%);
         transition: 0.1s ease-in-out;
     }
@@ -137,9 +140,9 @@ class PresentationCard extends HTMLElement {
             <h1 class="names">${this.names}</h1>
             <h2 class="lastnames">${this.lastnames}</h2>
             <div class="socialmedia-container">
-                <img src="${this.srcimgf}">
-                <img src="${this.srcimgs}">
-                <img src="${this.srcimgt}">
+                <a href="${this.githublink}"><img src="${this.srcimgf}"></a>
+                <a href="${this.twitterlink}"><img src="${this.srcimgt}"></a>
+                <a href="${this.linkedinlink}"><img src="${this.srcimgs}"></a>
             </div>
             <p class="short-description">Frontend dev on the making. Tech lover. I’m passionate about art and personal growth. <mark>Do you want to create to improve Latin America?</mark> Get in touch with me!</p>
             <div class="button-container">
