@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: #102929 url(/public/img/background.png) no-repeat fixed center;
+  background: #102929 url(/PresentationCard/public/img/background.png) no-repeat fixed center;
 }
 
 body header.header {
