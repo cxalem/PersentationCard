@@ -30,6 +30,19 @@ class CustomSpan extends HTMLElement {
       font-size: 1.6rem;
       line-height: 25px;
     }
+    @media screen and (min-width: 340px) {
+      div { 
+          margin: 0 1rem;
+          padding: 26px 38px;
+      }
+  }
+
+  @media screen and (min-width: 640px){
+      div { 
+          margin: 0;
+          padding: 36px 48px;
+      }
+  }
   `;
   }
 

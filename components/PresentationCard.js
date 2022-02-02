@@ -99,6 +99,13 @@ class PresentationCard extends HTMLElement {
     @media screen and (min-width: 340px){
       div.card-container {
         grid-template-columns: 1fr;
+        margin: 0 1rem;
+      }
+      div.card-info h1 {
+        font-size: 4.2rem;
+      }
+      div.card-info h2 {
+        font-size: 3.2rem;
       }
       img.profile-img {
         display: none;
@@ -113,6 +120,13 @@ class PresentationCard extends HTMLElement {
       div.card-container {
         grid-template-columns: 1fr .5fr;
         justify-items: flex-end;
+        margin: 0;
+      }
+      div.card-info h1 {
+        font-size: 6.2rem;
+      }
+      div.card-info h2 {
+        font-size: 5.2rem;
       }
       img.profile-img {
         display: block;

@@ -1,9 +1,9 @@
-import "./components/PresentationCard";
-import "./components/StackCard";
-import "./components/CustomButton";
-import "./components/AboutMeButton";
-import "./components/CustomCard";
-import "./components/CustomSpan";
+import "./components/PresentationCard.js";
+import "./components/StackCard.js";
+import "./components/CustomButton.js";
+import "./components/AboutMeButton.js";
+import "./components/CustomCard.js";
+import "./components/CustomSpan.js";
 
 const myStack = document.getElementById('my-stack');
 const stackListSection = document.getElementById('stack-list');
@@ -27,7 +27,7 @@ const showStackList = () => {
 const showAboutMe = () => {
     if (aboutMeSection.style.display = 'none') {
         presentationCard.style.display = 'none';
-        aboutMeSection.style.display = 'block';
+        aboutMeSection.style.display = 'flex';
         setTimeout(() => {
             aboutMeSection.classList.add('show-list');
             aboutMeSection.style.margin = '0';

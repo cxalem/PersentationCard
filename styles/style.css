@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: #102929 url(./public/img/background.png) no-repeat fixed center;
+  background: #102929 url(/public/img/background.png) no-repeat fixed center;
 }
 
 body header.header {
@@ -122,6 +122,9 @@ div#app section.aboutme-section div.cards-container {
   div.cards-container custom-card {
     margin: 20px 0;
   }
+  section.aboutme-section h3 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 786px) {
@@ -148,6 +151,9 @@ div#app section.aboutme-section div.cards-container {
   }
   div.cards-container custom-card {
     margin-right: 94px;
+  }
+  section.aboutme-section h3 {
+    text-align: start;
   }
 }
 /*# sourceMappingURL=style.css.map */

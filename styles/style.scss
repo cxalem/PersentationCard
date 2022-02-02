@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: $background-color url(public/img/background.png) no-repeat fixed center;
+  background: $background-color url(/public/img/background.png) no-repeat fixed center;
   header.header {
     display: flex;
     align-items: center;
@@ -88,6 +88,9 @@ div#app {
       margin: 20px 0;
     }
   }
+  section.aboutme-section h3 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 786px){
@@ -103,6 +106,9 @@ div#app {
     custom-card {
       margin-right: 94px;
     }
+  }
+  section.aboutme-section h3 {
+    text-align:start;
   }
 }
 

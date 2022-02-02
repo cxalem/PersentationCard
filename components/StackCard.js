@@ -50,8 +50,20 @@ class StackCard extends HTMLElement {
         margin: 0;
     }
 
-  `;
-  }
+    @media screen and (min-width: 340px) {
+        div.card-container { 
+            margin: 0 1rem;
+            padding: 26px 38px;
+        }
+    }
+
+    @media screen and (min-width: 640px){
+        div.card-container { 
+            margin: 0;
+            padding: 36px 48px;
+        }
+    }`;
+}
 
  connectedCallback() {
     this.render();
