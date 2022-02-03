@@ -154,9 +154,9 @@ class PresentationCard extends HTMLElement {
             <h1 class="names">${this.names}</h1>
             <h2 class="lastnames">${this.lastnames}</h2>
             <div class="socialmedia-container">
-                <a href="${this.githublink}"><img src="${this.srcimgf}"></a>
-                <a href="${this.twitterlink}"><img src="${this.srcimgt}"></a>
-                <a href="${this.linkedinlink}"><img src="${this.srcimgs}"></a>
+                <a href="${this.githublink}" target="_blank"><img src="${this.srcimgf}"></a>
+                <a href="${this.twitterlink}" target="_blank"><img src="${this.srcimgt}"></a>
+                <a href="${this.linkedinlink}" target="_blank"><img src="${this.srcimgs}"></a>
             </div>
             <p class="short-description">Frontend dev on the making. Tech lover. I’m passionate about art and personal growth. <mark>Do you want to create to improve Latin America?</mark> Let's do it together!</p>
             <div class="button-container">
