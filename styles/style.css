@@ -12,6 +12,7 @@ html {
 
 body {
   background: #102929 url(/PresentationCard/public/img/background.png) no-repeat fixed center;
+  background-size: cover;
 }
 
 body header.header {
